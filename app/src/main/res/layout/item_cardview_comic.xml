@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_comic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_item_cover"
+            android:layout_width="150dp"
+            android:layout_height="265dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/chain_saw_man_1" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_cover"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/purple_500"
+            tools:text="@string/dummy_title"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_cover"
+            android:layout_below="@id/tv_item_title"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/gray"
+            tools:text="@string/dummy_author"/>
+
+        <TextView
+            android:id="@+id/tv_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_author"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/img_item_cover"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textSize="12sp"
+            tools:text="@string/dummy_desc" />
+
+        <Button
+            android:id="@+id/btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_description"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/img_item_cover"
+            android:text="@string/btn_text_card_view"
+            android:backgroundTint="@color/orange_500"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
