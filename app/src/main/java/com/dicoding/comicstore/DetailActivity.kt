@@ -17,6 +17,10 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        val actionBar = supportActionBar
+        actionBar!!.title = ""
+        actionBar.setDisplayHomeAsUpEnabled(true)
+
         val imgDetailCover: ImageView = findViewById(R.id.img_detail_cover)
 
         val tvDetailTitle: TextView = findViewById(R.id.tv_detail_title)
@@ -46,5 +50,10 @@ class DetailActivity : AppCompatActivity() {
         tvDetailIsbn.text = comic.isbn
         imgDetailCover.setImageResource(comic.cover)
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }
