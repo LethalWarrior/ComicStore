@@ -13,6 +13,8 @@ import com.bumptech.glide.request.RequestOptions
 
 class CardViewComicAdapter(private val listComic: ArrayList<Comic>) : RecyclerView.Adapter<CardViewComicAdapter.CardViewViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_comic, parent, false)
         return CardViewViewHolder(view)
@@ -31,6 +33,7 @@ class CardViewComicAdapter(private val listComic: ArrayList<Comic>) : RecyclerVi
         holder.tvDescription.text = comic.description
         holder.tvPrice.text = comic.price
 
+        holder.itemView.setOnClickListener{onItemClickCallback.onItemClicked(listComic[holder.adapterPosition])}
     }
 
     override fun getItemCount(): Int {
@@ -43,5 +46,9 @@ class CardViewComicAdapter(private val listComic: ArrayList<Comic>) : RecyclerVi
         var tvAuthor: TextView = itemView.findViewById(R.id.tv_item_author)
         var tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
         var tvPrice: TextView = itemView.findViewById(R.id.tv_item_price)
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Comic)
     }
 }
