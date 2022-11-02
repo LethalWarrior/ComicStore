@@ -37,6 +37,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/purple_500"
+            android:maxLines="2"
+            android:ellipsize="end"
             tools:text="@string/dummy_title"
             />
 
@@ -68,16 +70,22 @@
             android:textSize="12sp"
             tools:text="@string/dummy_desc" />
 
-        <Button
-            android:id="@+id/btn_detail"
+        <TextView
+            android:id="@+id/tv_item_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_item_description"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_toEndOf="@id/img_item_cover"
-            android:text="@string/btn_text_card_view"
-            android:backgroundTint="@color/orange_500"/>
+            android:gravity="center_vertical"
+            android:textSize="22sp"
+            android:textColor="@color/orange_500"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"
+            tools:text="Rp 149.622"/>
+
+
 
 
 

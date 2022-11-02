@@ -9,6 +9,7 @@ data class Comic(
     var isbn: String = "",
     var pages: Int = 0,
     var cover: Int = 0,
-    var publicationDate: String = ""
+    var publicationDate: String = "",
+    var price: String = ""
 
 )

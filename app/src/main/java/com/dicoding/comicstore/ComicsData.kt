@@ -38,6 +38,25 @@ object ComicsData {
         R.drawable.made_in_abyss_6
     )
 
+
+    private val comicsPrice = arrayOf(
+        "Rp 149.622",
+        "Rp 180.892",
+        "Rp 147.706",
+        "Rp 232.990",
+        "Rp 160.132",
+        "Rp 224.464",
+        "Rp 147.173",
+        "Rp 169.828",
+        "Rp 181.644",
+        "Rp 465.325",
+        "Rp 148.214",
+        "Rp 225.715",
+        "Rp 242.155",
+        "Rp 544.261",
+        "Rp 234.272"
+        )
+
     private val comicsDescription = arrayOf(
         "Broke young man + chainsaw dog demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous-Chainsaw Man!\nDenji's a poor young man who'll do anything for money, even hunting down devils with his pet devil-dog Pochita. He's a simple man with simple dreams, drowning under a mountain of debt. But his sad life gets turned upside down one day when he's betrayed by someone he trusts. Now with the power of a devil inside him, Denji's become a whole new man-Chainsaw Man!",
         "Futaro Uesugi is a second-year in high school, scraping to get by and pay off his family's debt. The only thing he can do is study, so when Futaro receives a part-time job offer to tutor the five daughters of a wealthy businessman, he can't pass it up. Little does he know, these five beautiful sisters are quintuplets, but the only thing they have in common is that they're all terrible at studying! At this rate, the sisters can't graduate, and Futaro must think of a plan that suits each of them - which feels hopeless when five-out-of-five of these girls think he's a loser!",
@@ -176,9 +195,10 @@ object ComicsData {
                 comic.genre = comicsGenre[position]
                 comic.author = comicsAuthor[position]
                 comic.publisher = comicsPublisher[position]
-                comic.isbn = comicsPublisher[position]
+                comic.isbn = comicsIsbn[position]
                 comic.pages = comicsPages[position]
                 comic.publicationDate = comicsPublicationDate[position]
+                comic.price = comicsPrice[position]
                 list.add(comic)
             }
             return list
