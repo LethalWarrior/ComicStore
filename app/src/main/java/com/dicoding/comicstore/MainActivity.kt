@@ -1,5 +1,6 @@
 package com.dicoding.comicstore
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,5 +25,14 @@ class MainActivity : AppCompatActivity() {
         rvComics.layoutManager = LinearLayoutManager(this)
         val cardViewComicAdapter = CardViewComicAdapter(listComic)
         rvComics.adapter = cardViewComicAdapter
+
+        cardViewComicAdapter.setOnItemClickCallback(object : CardViewComicAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Comic) {
+                val intentObject = Intent(this@MainActivity, DetailActivity::class.java)
+                intentObject.putExtra(DetailActivity.EXTRA_COMIC, data)
+                startActivity(intentObject)
+            }
+        })
+
     }
 }
