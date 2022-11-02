@@ -17,4 +17,7 @@
     <string name="detail_publisher">Publisher</string>
     <string name="detail_publication_date">Publication Date</string>
     <string name="dummy_isbn">1974709930</string>
+    <string name="about_name">Robby Auziqni</string>
+    <string name="about_email">albertfiraz@gmail.com</string>
+    <string name="action_about">About</string>
 </resources>

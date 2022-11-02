@@ -3,6 +3,8 @@ package com.dicoding.comicstore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,6 +21,19 @@ class MainActivity : AppCompatActivity() {
 
         listComic.addAll(ComicsData.listData)
         showRecyclerCardView()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.action_about_page) {
+            val intentObject = Intent(this@MainActivity, AboutActivity::class.java)
+            startActivity(intentObject)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun showRecyclerCardView() {
