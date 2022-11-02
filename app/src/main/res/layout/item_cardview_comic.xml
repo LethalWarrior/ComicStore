@@ -83,11 +83,7 @@
             android:textColor="@color/orange_500"
             android:layout_alignParentBottom="true"
             android:textStyle="bold"
-            tools:text="Rp 149.622"/>
-
-
-
-
+            tools:text="@string/dummy_price"/>
 
     </RelativeLayout>
 
