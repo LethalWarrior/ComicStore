@@ -15,6 +15,10 @@ class CardViewComicAdapter(private val listComic: ArrayList<Comic>) : RecyclerVi
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_comic, parent, false)
         return CardViewViewHolder(view)
