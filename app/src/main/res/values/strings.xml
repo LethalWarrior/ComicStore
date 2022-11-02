@@ -3,5 +3,18 @@
     <string name="dummy_desc">Broke young man + chainsaw dog demon = Chainsaw Man! Denji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous-Chainsaw Man!</string>
     <string name="dummy_author">Tatsuki Fujimoto</string>
     <string name="dummy_title">Chainsaw Man, Vol. 1</string>
-    <string name="btn_text_card_view">Add to Cart</string>
+    <string name="btn_add_to_cart">Add to Cart</string>
+    <string name="dummy_price">Rp 149.622</string>
+    <string name="dummy_publication_date">29 Oct 2020</string>
+    <string name="dummy_publisher">Viz. Media, Subs. of Shogakukan Inc</string>
+    <string name="dummy_genre">Action, Comedy Horror, Dark Fantasy</string>
+    <string name="btn_buy_text">Buy</string>
+    <string name="btn_share">share</string>
+    <string name="detail_description">Description</string>
+    <string name="detail_genre">Genre</string>
+    <string name="detail_pages">Pages</string>
+    <string name="dummy_pages">192 pages</string>
+    <string name="detail_publisher">Publisher</string>
+    <string name="detail_publication_date">Publication Date</string>
+    <string name="dummy_isbn">1974709930</string>
 </resources>
